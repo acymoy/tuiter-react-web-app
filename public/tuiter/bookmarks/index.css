@@ -1,0 +1,126 @@
+
+.wd-bookmarks-title-font {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wd-bookmarks-title-handle-font {
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+}
+
+.wd-bookmarks-name {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.wd-bookmarks-username {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.wd-thumbnail {
+    width: 504px;
+    height: 264px;
+    max-width: 506px;
+    object-fit: cover;
+    border-bottom:rgb(47, 51, 54) 1px solid;
+}
+
+.wd-thumbnail-title {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 504px;
+    margin: 12px 12px 12px 12px;
+    font-size: 15px;
+}
+
+.wd-thumbnail-text {
+    margin: 5px 12px 12px 12px;
+    font-size: 15px;
+    width: 504px;
+    color: rgb(47, 51, 54);
+}
+
+.wd-tuit-border {
+    border-color: rgb(47, 51, 54);
+    border-width: 1px;
+    border-style: solid;
+    margin: 0px 16px 0px 16px;
+}
+
+.wd-post-link-border {
+    border-color: rgb(47, 51, 54);
+}
+
+.wd-engagement-img {
+    height: 16px;
+    width: 16px;
+}
+
+.wd-engagement-numbers {
+    color: rgb(110, 118, 125);
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 12px;
+}
+
+.wd-liked-text {
+    color: red;
+}
+
+/* flexbox container */
+
+.wd-tuit-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wd-text-container {
+    margin: 12px 16px 12px 16px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.wd-post-link {
+    padding: 12px 12px 12px 12px;
+    color: white;
+    width: 506px;
+
+    border-radius: 5%;
+
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+}
+
+.wd-tuit-standard-margins {
+    margin: 12px 16px 12px 72px;
+}
+
+.wd-profile-pic-container {
+    margin: left;
+}
+
+.wd-username-container {
+    color: white;
+    margin: auto;
+    margin: 0px 12px 0px 12px;
+    max-width: 506px;
+}
+
+.wd-icon-bar-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 506px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wd-icon-child {
+    margin: auto;
+    flex-grow: 1;
+}

@@ -1,0 +1,39 @@
+html {
+    background-color: black;
+    font-family: Helvetica;
+}
+
+.wd-profile-pic {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+}
+
+.wd-container-border {
+    padding-left: 16px;
+    border-width: 1px;
+    border-color: rgb(47, 51, 54);
+    margin-left: 16px;
+    margin-right: 16px;
+    border-style: solid;
+    border-top: none
+}
+
+.wd-paragraph-margin-small {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.wd-tuit-text {
+    color: white;
+    font-size: 15px;
+    width: 506px;
+    word-break: whitespace;
+}
+
+.wd-rounded-corners-all-around {
+    border-radius: 60px;
+    border-width: 3px 3px 3px 3px;
+}
+
+
