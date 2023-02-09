@@ -2,6 +2,10 @@
     background-color: #212327;
 }
 
+.span {
+    white-space: nowrap;
+}
+
 
 .wd-image-rounded {
     border-radius: 22%;
