@@ -7,7 +7,8 @@ const TodoList = () => {
      <ul>
        {
          todos.map(todo => {
-           return(<TodoItem todo={todo}/>);
+           return(<><TodoItem todo={todo}/>
+           <h2>{54 + 64}</h2> </>);
          })
        }
      </ul>

@@ -1,13 +1,14 @@
 import React from "react";
-import tweets from "../tweet/tweets.json";
-import Tweet from "../tweet";
+import tweets from "../tuits/tweets.json"
+import Tweet from "../tuits/tuits-list";
+import WhatsHappening from "./whats-happening";
 
 const HomeComponent = () => {
     return (
         <div>
-            {
-                tweets.map(x => <Tweet post={x} key = {x._id}/>)
-            }
+            <h4>Home</h4>
+            <WhatsHappening/>
+            <Tweet/>
         </div>
     )
 }
