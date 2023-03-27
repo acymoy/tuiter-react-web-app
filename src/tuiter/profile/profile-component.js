@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const ProfileComponent = () => {
     const profile = useSelector(state => state.profile);
-    console.log(profile)
 
     return (
         <div>

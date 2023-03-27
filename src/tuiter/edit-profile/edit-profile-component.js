@@ -10,7 +10,6 @@ const EditProfileComponent = () => {
     let [profile, setProfile] = useState(initialProfile);
     const dispatch = useDispatch();
     const profileClickHandler = () => {
-        console.log(profile)
         dispatch(updateProfile(profile));
     }
 
@@ -53,7 +52,7 @@ const EditProfileComponent = () => {
 
     return (
         <div>
-            <h4>Edit profile</h4>
+            <h4><Link to='/tuiter/profile'><i className="fa-solid fa-x me-3 link-dark"></i></Link> Edit profile</h4>
             <div className='row col-12 container-fluid border m-0 p-0'>
                 <img src={profile.bannerPic} className='img-fluid w-100 p-0'></img>
             </div>

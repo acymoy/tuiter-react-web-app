@@ -15,12 +15,7 @@ const profileSlice = createSlice({
     initialState: initialProfile,
     reducers: {
         updateProfile(state, action) {
-            console.log('before')
-            console.log(state)
             state = action.payload;
-            console.log('after')
-            console.log(action.payload)
-            console.log(state)
             return state;
         }
     }
