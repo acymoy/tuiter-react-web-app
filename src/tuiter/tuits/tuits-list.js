@@ -1,26 +1,32 @@
-import React from "react";
+import React, {useEffect} from "react";
 import TuitStats from "./tuit-stats";
 import { useSelector, useDispatch } from "react-redux";
-import { clickLike, deleteTuit } from "../reducers/tuits-reducer";
+import { clickLike} from "../reducers/tuits-reducer";
+import {deleteTuitThunk} from "../../services/tuits-thunks";
+
+import { findTuitsThunk } from "../../services/tuits-thunks";
 import { useState } from "react";
 
 const Tuits = () => {
-    const tuits = useSelector(state => state.tuits);
+    const {tuits, loading} = useSelector(state => state.tuitsData);
     const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(findTuitsThunk())
+    }, [])
     const clickLikeHandler = (id) => {
         dispatch(clickLike(id))
     }
     const deleteTuitHandler = (id) => {
-        dispatch(deleteTuit(id))
+        dispatch(deleteTuitThunk(id))
     }
     return (
         tuits.map((tuit, index) =>
-            <div className='container-fluid d-flex pt-3 pb-3 mb-0 border-bottom'>
+            <div className='d-flex pt-3 pb-3 mb-0 border-bottom'>
                 <div className='d-flex col-2 align-items-start pe-3'>
-                    <img src={tuit.userProfile}
-                        className="img-fluid rounded-circle" />
+                    <img src={tuit.userProfile} 
+                        className="img-fluid rounded-circle"/>
                 </div>
-                <div className='col-11 ps-2 container-fluid align-items-start'>
+                <div className='col-10 ps-2 container-fluid align-items-start'>
                     <div className='row col-12 container-fluid'>
                         <p className='m-0'><b className=''>{tuit.userName} <span className='fa-stack fa-2xs'>
                             <i className="fa-solid fa-certificate fa-stack-2x" style={{ "color": "#0d9bf0" }}></i>

@@ -1,11 +1,15 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { updateTuitThunk } from '../../services/tuits-thunks';
 import { clickLike } from '../reducers/tuits-reducer';
 
 const TuitStats = (post) => {
     const dispatch = useDispatch();
     const clickLikeHandler = (tuit) => {
-        dispatch(clickLike(tuit.post))
+        dispatch(updateTuitThunk({
+            ...tuit,
+            likes: tuit.likes + 1
+        }))
     }
     //console.log(post.post)
     //console.log(JSON.stringify(post))

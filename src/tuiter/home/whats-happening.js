@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createTuit } from '../reducers/tuits-reducer';
+import { createTuitThunk } from '../../services/tuits-thunks';
 import { useDispatch } from 'react-redux';
 
 
@@ -11,7 +12,7 @@ const WhatsHappening = () => {
             text: whatsHappening
         }
         console.log(newTuit)
-        dispatch(createTuit(newTuit))
+        dispatch(createTuitThunk(newTuit))
     }
     return (
         <div className="row pt-4">
