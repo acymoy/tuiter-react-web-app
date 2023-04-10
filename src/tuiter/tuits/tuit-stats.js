@@ -6,9 +6,11 @@ import { clickLike } from '../reducers/tuits-reducer';
 const TuitStats = (post) => {
     const dispatch = useDispatch();
     const clickLikeHandler = (tuit) => {
+        const newLikes = tuit.post.liked ? tuit.post.likes - 1 : tuit.post.likes + 1;
         dispatch(updateTuitThunk({
-            ...tuit,
-            likes: tuit.likes + 1
+            ...tuit.post,
+            likes: newLikes,
+            liked: !tuit.post.liked
         }))
     }
     //console.log(post.post)

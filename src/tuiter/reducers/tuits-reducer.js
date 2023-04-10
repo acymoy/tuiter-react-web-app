@@ -10,13 +10,12 @@ const currentUser = {
 
 const templateTuit = {
     ...currentUser,
-    'topic': 'Space',
-    'time': '2h',
-    'liked': false,
-    'replies': 0,
-    'likes': 0,
-    'shares': 0,
-    'comments': 0,
+    time: 'now',
+    liked: false,
+    replies: 0,
+    likes: 0,
+    shares: 0,
+    comments: 0,
 }
 
 const initialState = {
@@ -51,8 +50,6 @@ const tuitsSlice = createSlice({
             },
         [createTuitThunk.fulfilled]:
             (state, { payload }) => {
-                console.log('tuit has been fulfilled')
-                console.log(payload)
                 state.loading = false
                 state.tuits.push(payload)
             },
@@ -62,6 +59,7 @@ const tuitsSlice = createSlice({
                 const tuitNdx = state.tuits
                     .findIndex((t) => t._id === payload._id)
                 state.tuits[tuitNdx] = {
+                    ...templateTuit,
                     ...state.tuits[tuitNdx],
                     ...payload
                 }

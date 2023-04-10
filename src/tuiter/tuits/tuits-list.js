@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import TuitStats from "./tuit-stats";
+import TuitAttachment from "./tuit-attachment";
 import { useSelector, useDispatch } from "react-redux";
 import { clickLike } from "../reducers/tuits-reducer";
 import { deleteTuitThunk } from "../../services/tuits-thunks";
@@ -9,14 +10,11 @@ import { useState } from "react";
 
 const Tuits = () => {
     const { tuits, loading } = useSelector(state => state.tuitsData);
-    console.log(tuits)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(findTuitsThunk())
     }, [])
-    const clickLikeHandler = (id) => {
-        dispatch(clickLike(id))
-    }
+
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuitThunk(id))
     }
@@ -37,11 +35,7 @@ const Tuits = () => {
 
                         <p className=''>{tuit.tuit}</p>
                     </div>
-                    <div className='row container-fluid border p-0 rounded-top rounded-3 align-items-start'>
-                        <img src={tuit.image} className='img-fluid ' />
-                        <p className='m-0'>{tuit.mediaTitle}</p>
-                        <p className='text-secondary'>{tuit.mediaDescription}</p>
-                    </div>
+                    {tuit.attachment ? <TuitAttachment post={tuit}/> : ``}
                     <TuitStats post={tuit} />
                 </div>
             </div>

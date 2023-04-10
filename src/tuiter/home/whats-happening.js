@@ -6,16 +6,22 @@ import { useDispatch } from 'react-redux';
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
     const dispatch = useDispatch();
+    const profilePic = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
     const tuitClickHandler = () => {
         const newTuit = {
-            tuit: whatsHappening
+            username: "It's You",
+            handle: "you",
+            userProfile: profilePic,
+            time: 'now',
+            tuit: whatsHappening,
+            attachment: false
         }
         dispatch(createTuitThunk(newTuit))
     }
     return (
         <div className="row pt-4">
             <div className="col-auto">
-                <img src="https://flxt.tmsimg.com/assets/p20454835_b_h8_aa.jpg" width={60} className = 'rounded-circle'/>
+                <img src={profilePic} width={60} className = 'rounded-circle'/>
             </div>
             <div className="col-10">
                 <textarea value={whatsHappening} placeholder="What's happening?"
