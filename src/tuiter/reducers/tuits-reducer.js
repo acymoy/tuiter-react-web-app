@@ -51,6 +51,8 @@ const tuitsSlice = createSlice({
             },
         [createTuitThunk.fulfilled]:
             (state, { payload }) => {
+                console.log('tuit has been fulfilled')
+                console.log(payload)
                 state.loading = false
                 state.tuits.push(payload)
             },

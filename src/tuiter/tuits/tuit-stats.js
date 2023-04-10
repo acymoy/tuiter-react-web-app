@@ -19,10 +19,10 @@ const TuitStats = (post) => {
     return (
         <div className='row pt-2 d-flex'>
             <div className='col'>
-                <i className="fa-regular fa-comment"></i><span className='ps-3'> {post.post.comments}</span>
+                <i className="fa-regular fa-comment"></i><span className='ps-3'> {post.post.replies}</span>
             </div>
             <div className='col'>
-                <i className="fa-solid fa-retweet"></i><span className='ps-3'> {post.post.shares}</span>
+                <i className="fa-solid fa-retweet"></i><span className='ps-3'> {post.post.retuits}</span>
             </div>
             <div className='col'>
                 <i className={heartIcon} style = {heartStyle} onClick = {() => clickLikeHandler(post)}></i><span className='ps-3'> {post.post.likes}</span>
